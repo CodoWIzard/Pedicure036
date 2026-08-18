@@ -832,22 +832,21 @@ body[data-page="regels"] .rule-item + .rule-item { padding-top: 26px; }
 .timeline {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  border: 0;
+  gap: 0;
+  border-top: 1px solid rgba(80, 62, 48, .18);
+  border-bottom: 1px solid rgba(80, 62, 48, .18);
 }
 
 .timeline div {
   position: relative;
-  min-height: 310px;
+  min-height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border: 1px solid rgba(80, 62, 48, .16);
-  border-radius: 28px;
-  padding: 34px 30px;
-  background: rgba(255, 250, 242, .48);
-  box-shadow: 0 18px 52px rgba(91, 67, 49, .08);
-  transition: background .25s ease, border-color .25s ease, transform .25s ease;
+  border-right: 1px solid rgba(80, 62, 48, .14);
+  padding: 32px 30px;
+  background: transparent;
+  transition: background .25s ease;
 }
 
 .timeline div > p {
@@ -855,13 +854,11 @@ body[data-page="regels"] .rule-item + .rule-item { padding-top: 26px; }
 }
 
 .timeline div:last-child {
-  border-right: 1px solid rgba(80, 62, 48, .16);
+  border-right: 0;
 }
 
 .timeline div:hover {
-  background: rgba(255, 250, 242, .72);
-  border-color: rgba(168, 111, 94, .28);
-  transform: translateY(-3px);
+  background: rgba(255, 250, 242, .42);
 }
 
 .timeline p {
@@ -1277,7 +1274,7 @@ form small {
 
   .timeline div {
     min-height: 160px;
-    border-right: 1px solid rgba(80, 62, 48, .16);
+    border-right: 0;
     border-bottom: 1px solid rgba(80, 62, 48, .16);
   }
 
@@ -1286,7 +1283,7 @@ form small {
   }
 
   .timeline div:last-child {
-    border-bottom: 1px solid rgba(80, 62, 48, .16);
+    border-bottom: 0;
   }
 
   .appointment-inner {
@@ -2699,7 +2696,7 @@ body {
 
   .timeline div {
     min-height: 150px;
-    padding: 24px;
+    padding: 22px 0;
   }
 
   .accordion button {
