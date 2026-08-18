@@ -109,21 +109,21 @@ const careStudio = document.querySelector("[data-care-studio]");
 if (careStudio) {
   const careContent = {
     nagels: {
-      kicker: "Focus 01",
+      kicker: "Focus",
       title: "Nagelverzorging",
       copy: "Knippen, reinigen, mechanisch afwerken en polijsten van nagels met aandacht voor nagelvorm, verdikking en comfort in schoenen.",
       lines: ["Knippen zonder druk", "Reinigen van nagelomgeving", "Afwerken en polijsten", "Advies bij verdikte nagels"],
       background: "center"
     },
     huid: {
-      kicker: "Focus 02",
+      kicker: "Focus",
       title: "Voetverzorging",
       copy: "Eelt, droge huid, kloven, likdoorns en gevoelige drukplekken worden rustig behandeld, met aandacht voor wat je voet dagelijks belast.",
       lines: ["Eelt zorgvuldig verminderen", "Kloven en droge huid verzorgen", "Drukplekken beoordelen", "Likdoorns rustig behandelen"],
       background: "58% center"
     },
     advies: {
-      kicker: "Focus 03",
+      kicker: "Focus",
       title: "Nazorg en advies",
       copy: "Je krijgt duidelijke tips voor thuis en eerlijk advies wanneer doorverwijzing naar huisarts, podotherapeut of medisch pedicure verstandiger is.",
       lines: ["Thuisverzorging concreet maken", "Schoen- en drukadvies", "Vervolgafspraak inschatten", "Doorverwijzen waar nodig"],

@@ -398,8 +398,7 @@ h2 {
 .care-intro-content h2 { max-width: 610px; margin-top: 18px; }
 .care-intro-lead { max-width: 570px; margin-top: 26px; font-size: 1.08rem; }
 .care-points { margin-top: 34px; border-top: 1px solid rgba(80,62,48,.18); }
-.care-point { display: grid; grid-template-columns: 42px 1fr; gap: 14px; padding: 18px 0; border-bottom: 1px solid rgba(80,62,48,.18); }
-.care-point > span { color: var(--rose); font-size: .78rem; font-weight: 900; letter-spacing: .08em; padding-top: 3px; }
+.care-point { display: grid; grid-template-columns: 1fr; gap: 14px; padding: 18px 0; border-bottom: 1px solid rgba(80,62,48,.18); }
 .care-point strong, .care-point small { display: block; }
 .care-point strong { font-family: var(--display); font-size: 1.35rem; font-weight: 500; }
 .care-point small { color: var(--muted); margin-top: 4px; }
@@ -448,7 +447,7 @@ h2 {
 .service-item {
   width: 100%;
   display: grid;
-  grid-template-columns: 56px 1fr;
+  grid-template-columns: 1fr;
   gap: 12px;
   text-align: left;
   border: 1px solid var(--line);
@@ -467,11 +466,6 @@ h2 {
   border-color: rgba(168,111,94,.32);
 }
 
-.service-item span {
-  color: var(--gold);
-  font-weight: 800;
-}
-
 .service-item strong {
   display: block;
   font-family: var(--display);
@@ -479,7 +473,6 @@ h2 {
 }
 
 .service-item small {
-  grid-column: 2;
   color: var(--muted);
   font-size: .95rem;
 }
@@ -529,8 +522,8 @@ h2 {
 .care-tab {
   width: 100%;
   display: grid;
-  grid-template-columns: 42px 1fr;
-  gap: 4px 16px;
+  grid-template-columns: 1fr;
+  gap: 4px;
   align-items: start;
   border: 0;
   border-bottom: 1px solid rgba(80, 62, 48, .18);
@@ -539,14 +532,6 @@ h2 {
   color: var(--ink);
   text-align: left;
   cursor: pointer;
-}
-
-.care-tab span {
-  grid-row: span 2;
-  color: var(--rose);
-  font-size: .82rem;
-  font-weight: 900;
-  letter-spacing: .08em;
 }
 
 .care-tab strong {
@@ -856,7 +841,7 @@ body[data-page="regels"] .rule-item + .rule-item { padding-top: 26px; }
 }
 
 .timeline div > p {
-  margin-top: 72px;
+  margin-top: 0;
 }
 
 .timeline div:last-child {
@@ -865,13 +850,6 @@ body[data-page="regels"] .rule-item + .rule-item { padding-top: 26px; }
 
 .timeline div:hover {
   background: rgba(255, 250, 242, .52);
-}
-
-.timeline span {
-  color: var(--rose);
-  font-family: var(--display);
-  font-size: clamp(2rem, 4vw, 4.4rem);
-  line-height: .9;
 }
 
 .timeline p {
@@ -1754,7 +1732,7 @@ h2 {
 .service-preview.editorial-block .service-panel > p:not(.eyebrow) { max-width: 390px; margin-top: 24px; }
 .service-preview.editorial-block .service-list { align-self: center; border-top: 1px solid var(--line); }
 .service-preview.editorial-block .service-item {
-  grid-template-columns: 54px 1fr auto;
+  grid-template-columns: 1fr auto;
   align-items: center;
   gap: 18px;
   min-height: 92px;
@@ -1763,9 +1741,8 @@ h2 {
 }
 .service-preview.editorial-block .service-item:hover { padding-left: 18px; padding-right: 18px; background: rgba(255,244,223,.55); }
 .service-preview.editorial-block .service-item::after { content: '↗'; color: var(--rose); font-size: 1.25rem; }
-.service-preview.editorial-block .service-item span { font-size: .78rem; letter-spacing: .08em; }
 .service-preview.editorial-block .service-item strong { font-size: clamp(1.25rem, 2vw, 1.65rem); }
-.service-preview.editorial-block .service-item small { grid-column: 2; margin-top: -10px; }
+.service-preview.editorial-block .service-item small { grid-column: 1; margin-top: -10px; }
 
 /* Compacte overgang tussen Waarom en Behandelingen */
 .intro-grid {
@@ -1779,8 +1756,8 @@ h2 {
 @media (max-width: 760px) {
   .intro-grid { padding-bottom: 34px; }
   .service-preview.editorial-block { grid-template-columns: 1fr; gap: 44px; padding: 46px 0 64px; }
-  .service-preview.editorial-block .service-item { grid-template-columns: 40px 1fr auto; gap: 10px; }
-  .service-preview.editorial-block .service-item small { grid-column: 2 / 4; }
+  .service-preview.editorial-block .service-item { grid-template-columns: 1fr auto; gap: 10px; }
+  .service-preview.editorial-block .service-item small { grid-column: 1 / 3; }
 }
 
 .appointment-inner .eyebrow {
@@ -2704,7 +2681,7 @@ body {
   }
 
   .care-tab {
-    grid-template-columns: 36px 1fr;
+    grid-template-columns: 1fr;
     padding: 18px 0;
   }
 
