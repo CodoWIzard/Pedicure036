@@ -1016,9 +1016,11 @@ form small {
 
 .site-footer {
   margin: 0;
-  border-top: 1px solid rgba(255, 250, 242, .22);
-  background: var(--rose);
-  color: var(--warm);
+  border-top: 1px solid rgba(168, 111, 94, .14);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 242, .58), rgba(246, 224, 226, .94)),
+    #f6e0e2;
+  color: var(--ink);
 }
 
 .footer-main {
@@ -1061,13 +1063,13 @@ form small {
 
 .footer-column p {
   margin: 0;
-  color: rgba(255, 250, 242, .78);
+  color: rgba(70, 52, 45, .7);
   font-size: .88rem;
   line-height: 1.65;
 }
 
 .footer-title {
-  color: rgba(255, 250, 242, .96);
+  color: rgba(168, 111, 94, .92);
   font-family: var(--body);
   font-size: .74rem;
   font-weight: 800;
@@ -1088,7 +1090,7 @@ form small {
 .footer-nav a,
 .footer-contact a,
 .footer-bottom a {
-  color: rgba(255, 250, 242, .78);
+  color: rgba(70, 52, 45, .74);
   font-size: .88rem;
 }
 
@@ -1097,14 +1099,14 @@ form small {
 }
 
 .site-footer a:hover {
-  color: var(--warm);
+  color: var(--rose);
   transform: translateX(3px);
 }
 
 .footer-map iframe {
   width: 100%;
   height: 164px;
-  border: 1px solid rgba(255, 250, 242, .28);
+  border: 1px solid rgba(168, 111, 94, .18);
   filter: saturate(.82) contrast(.96);
 }
 
@@ -1116,8 +1118,8 @@ form small {
   align-items: center;
   justify-content: space-between;
   gap: 22px;
-  border-top: 1px solid rgba(255, 250, 242, .18);
-  border-bottom: 1px solid rgba(255, 250, 242, .18);
+  border-top: 1px solid rgba(168, 111, 94, .16);
+  border-bottom: 1px solid rgba(168, 111, 94, .16);
 }
 
 .partner-logos {
@@ -1134,8 +1136,8 @@ form small {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(31, 26, 23, .12);
-  background: #fff;
+  border: 1px solid rgba(168, 111, 94, .14);
+  background: rgba(255, 250, 242, .64);
 }
 
 .partner-logos img {
@@ -1179,7 +1181,7 @@ form small {
   gap: 18px;
   flex-wrap: wrap;
   padding: 24px 0 30px;
-  color: rgba(255, 250, 242, .72);
+  color: rgba(70, 52, 45, .62);
   font-size: .82rem;
   letter-spacing: .04em;
 }
