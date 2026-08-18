@@ -118,15 +118,15 @@ if (careStudio) {
     huid: {
       kicker: "Focus",
       title: "Voetverzorging",
-      copy: "Eelt, droge huid, kloven, likdoorns en gevoelige drukplekken worden rustig behandeld, met aandacht voor wat je voet dagelijks belast.",
-      lines: ["Eelt zorgvuldig verminderen", "Kloven en droge huid verzorgen", "Drukplekken beoordelen", "Likdoorns rustig behandelen"],
+      copy: "De voetbehandeling richt zich op huidcomfort, drukplekken en verzorging van belaste voeten.",
+      lines: ["Eelt verminderen", "Droge huid verzorgen", "Kloven behandelen", "Likdoorns behandelen", "Drukplekken beoordelen", "Gevoelige plekken verzorgen"],
       background: "58% center"
     },
     advies: {
       kicker: "Focus",
       title: "Nazorg en advies",
-      copy: "Je krijgt duidelijke tips voor thuis en eerlijk advies wanneer doorverwijzing naar huisarts, podotherapeut of medisch pedicure verstandiger is.",
-      lines: ["Thuisverzorging concreet maken", "Schoen- en drukadvies", "Vervolgafspraak inschatten", "Doorverwijzen waar nodig"],
+      copy: "De nazorg helpt je thuis verder met duidelijke verzorging, schoenadvies en vervolgstappen.",
+      lines: ["Thuisverzorging uitleggen", "Schoenadvies geven", "Drukadvies bespreken", "Vervolgafspraak inschatten", "Doorverwijzing adviseren", "Verzorgingsroutine meegeven"],
       background: "72% center"
     }
   };
