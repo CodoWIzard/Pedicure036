@@ -647,17 +647,22 @@ h2 {
 }
 
 .split-intro {
-  max-width: 420px;
+  max-width: 620px;
   margin-top: 24px;
 }
 
 .process-section {
-  align-items: end;
+  align-items: start;
 }
 
 .process-section.split-detail {
-  grid-template-columns: .72fr 1.28fr;
-  gap: clamp(42px, 6vw, 96px);
+  grid-template-columns: 1fr;
+  gap: 42px;
+  padding-top: 54px;
+}
+
+.process-section > .reveal:first-child {
+  max-width: 760px;
 }
 
 .split-detail,
@@ -827,19 +832,22 @@ body[data-page="regels"] .rule-item + .rule-item { padding-top: 26px; }
 .timeline {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid rgba(80, 62, 48, .2);
-  border-bottom: 1px solid rgba(80, 62, 48, .2);
+  gap: 18px;
+  border: 0;
 }
 
 .timeline div {
   position: relative;
-  min-height: 270px;
+  min-height: 310px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  border-right: 1px solid rgba(80, 62, 48, .16);
-  padding: 26px 28px 30px;
-  transition: background .25s ease;
+  border: 1px solid rgba(80, 62, 48, .16);
+  border-radius: 28px;
+  padding: 34px 30px;
+  background: rgba(255, 250, 242, .48);
+  box-shadow: 0 18px 52px rgba(91, 67, 49, .08);
+  transition: background .25s ease, border-color .25s ease, transform .25s ease;
 }
 
 .timeline div > p {
@@ -847,15 +855,17 @@ body[data-page="regels"] .rule-item + .rule-item { padding-top: 26px; }
 }
 
 .timeline div:last-child {
-  border-right: 0;
+  border-right: 1px solid rgba(80, 62, 48, .16);
 }
 
 .timeline div:hover {
-  background: rgba(255, 250, 242, .52);
+  background: rgba(255, 250, 242, .72);
+  border-color: rgba(168, 111, 94, .28);
+  transform: translateY(-3px);
 }
 
 .timeline p {
-  max-width: 17ch;
+  max-width: 24ch;
   margin: 0;
   line-height: 1.7;
   text-wrap: pretty;
@@ -1267,16 +1277,16 @@ form small {
 
   .timeline div {
     min-height: 160px;
-    border-right: 0;
+    border-right: 1px solid rgba(80, 62, 48, .16);
     border-bottom: 1px solid rgba(80, 62, 48, .16);
   }
 
   .timeline div > p {
-    margin-top: 28px;
+    margin-top: 0;
   }
 
   .timeline div:last-child {
-    border-bottom: 0;
+    border-bottom: 1px solid rgba(80, 62, 48, .16);
   }
 
   .appointment-inner {
@@ -2689,7 +2699,7 @@ body {
 
   .timeline div {
     min-height: 150px;
-    padding: 18px 0;
+    padding: 24px;
   }
 
   .accordion button {
