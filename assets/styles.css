@@ -82,6 +82,129 @@ p {
   background: rgba(255, 250, 242, .92);
 }
 
+.promo-strip {
+  position: relative;
+  z-index: 8;
+  width: min(1180px, calc(100% - 32px));
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 8px auto 0;
+  padding: 8px 18px;
+  border-top: 1px solid rgba(168, 111, 94, .22);
+  border-bottom: 1px solid rgba(168, 111, 94, .22);
+  color: var(--ink);
+  font-size: .88rem;
+}
+
+.promo-strip span {
+  color: var(--rose);
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.promo-strip strong {
+  font-weight: 800;
+}
+
+.promo-strip a {
+  color: var(--rose);
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.promo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(45, 37, 31, .28);
+  backdrop-filter: blur(7px);
+}
+
+.promo-modal.is-hidden {
+  display: none;
+}
+
+.promo-modal__panel {
+  position: relative;
+  width: min(520px, 100%);
+  padding: clamp(28px, 5vw, 46px);
+  border: 1px solid rgba(168, 111, 94, .24);
+  background: var(--warm);
+  box-shadow: 0 30px 90px rgba(45, 37, 31, .24);
+}
+
+.promo-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(168, 111, 94, .1);
+  color: var(--ink);
+  cursor: pointer;
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.promo-modal h2 {
+  margin: 14px 0 0;
+  color: var(--ink);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.promo-modal p {
+  max-width: 420px;
+  margin: 18px 0 0;
+}
+
+.promo-modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.promo-modal__actions button:not(.button) {
+  min-height: 48px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .promo-strip {
+    flex-wrap: wrap;
+    gap: 6px 12px;
+    justify-content: flex-start;
+    font-size: .82rem;
+  }
+
+  .promo-strip span,
+  .promo-strip strong,
+  .promo-strip a {
+    flex: 0 1 auto;
+  }
+
+  .promo-modal {
+    padding: 16px;
+  }
+}
+
 .brand,
 .site-nav,
 .site-footer nav,
@@ -709,35 +832,6 @@ body[data-page="regels"] .rule-item + .rule-item { padding-top: 26px; }
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
   padding: 30px 0 72px;
-}
-
-.september-discount {
-  display: grid;
-  grid-template-columns: minmax(0, .72fr) minmax(0, 1fr);
-  gap: 14px 34px;
-  align-items: center;
-  margin-top: 8px;
-  margin-bottom: 32px;
-  padding: 22px 0;
-  border-top: 1px solid rgba(168, 111, 94, .28);
-  border-bottom: 1px solid rgba(168, 111, 94, .28);
-}
-
-.september-discount .tiny-label {
-  grid-column: 1 / -1;
-}
-
-.september-discount strong {
-  color: var(--rose);
-  font-family: var(--display);
-  font-size: clamp(1.8rem, 3.1vw, 3rem);
-  font-weight: 400;
-  line-height: 1.05;
-}
-
-.september-discount p {
-  max-width: 520px;
-  margin: 0;
 }
 
 .price-card {
@@ -1804,10 +1898,6 @@ h2 {
   .service-preview.editorial-block { grid-template-columns: 1fr; gap: 44px; padding: 46px 0 64px; }
   .service-preview.editorial-block .service-item { grid-template-columns: 1fr auto; gap: 10px; }
   .service-preview.editorial-block .service-item small { grid-column: 1 / 3; }
-  .september-discount {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
 }
 
 .appointment-inner .eyebrow {

@@ -1,6 +1,66 @@
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
+const septemberPromo = {
+  label: "September actie",
+  title: "10% korting voor nieuwe klanten",
+  text: "Alleen in september voor nieuwe aanmeldingen op de eerste behandeling.",
+  storageKey: "pedicure036-september-promo-seen"
+};
+
+if (header) {
+  header.insertAdjacentHTML("afterend", `
+    <aside class="promo-strip" aria-label="${septemberPromo.label}">
+      <span>${septemberPromo.label}</span>
+      <strong>${septemberPromo.title}</strong>
+      <a href="contact.html#afspraak">Afspraak maken</a>
+    </aside>
+  `);
+}
+
+const hasSeenPromo = (() => {
+  try {
+    return window.sessionStorage.getItem(septemberPromo.storageKey) === "true";
+  } catch {
+    return false;
+  }
+})();
+
+if (!hasSeenPromo) {
+  document.body.insertAdjacentHTML("beforeend", `
+    <div class="promo-modal" role="dialog" aria-modal="true" aria-labelledby="promo-modal-title" data-promo-modal>
+      <div class="promo-modal__panel">
+        <button class="promo-modal__close" type="button" aria-label="Actie sluiten" data-promo-close>×</button>
+        <span class="tiny-label">${septemberPromo.label}</span>
+        <h2 id="promo-modal-title">${septemberPromo.title}</h2>
+        <p>${septemberPromo.text}</p>
+        <div class="promo-modal__actions">
+          <a class="button primary" href="contact.html#afspraak" data-promo-close>Afspraak maken</a>
+          <button type="button" data-promo-close>Later bekijken</button>
+        </div>
+      </div>
+    </div>
+  `);
+}
+
+const promoModal = document.querySelector("[data-promo-modal]");
+const closePromo = () => {
+  if (!promoModal) return;
+  promoModal.classList.add("is-hidden");
+  try {
+    window.sessionStorage.setItem(septemberPromo.storageKey, "true");
+  } catch {
+    // Ignore storage failures; the close interaction should still work.
+  }
+};
+
+promoModal?.addEventListener("click", (event) => {
+  if (event.target === promoModal || event.target.closest("[data-promo-close]")) closePromo();
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closePromo();
+});
 
 if (navToggle && nav) {
   navToggle.addEventListener("click", () => {
