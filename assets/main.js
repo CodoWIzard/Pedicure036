@@ -5,7 +5,9 @@ const septemberPromo = {
   label: "September actie",
   title: "10% korting voor nieuwe klanten",
   text: "Alleen in september voor nieuwe aanmeldingen op de eerste behandeling.",
-  storageKey: "pedicure036-september-promo-seen"
+  code: "SEPTEMBER10",
+  storageKey: "pedicure036-september-promo-seen",
+  delay: 2600
 };
 
 if (header) {
@@ -31,9 +33,18 @@ if (!hasSeenPromo) {
     <div class="promo-modal" role="dialog" aria-modal="true" aria-labelledby="promo-modal-title" data-promo-modal>
       <div class="promo-modal__panel">
         <button class="promo-modal__close" type="button" aria-label="Actie sluiten" data-promo-close>×</button>
+        <div class="promo-modal__ornament" aria-hidden></div>
         <span class="tiny-label">${septemberPromo.label}</span>
-        <h2 id="promo-modal-title">${septemberPromo.title}</h2>
+        <p class="promo-modal__intro">Nieuwe klanten ontvangen in september</p>
+        <h2 id="promo-modal-title">
+          <span>10%</span>
+          korting
+        </h2>
         <p>${septemberPromo.text}</p>
+        <div class="promo-modal__code">
+          <span>Actie</span>
+          <strong>${septemberPromo.code}</strong>
+        </div>
         <div class="promo-modal__actions">
           <a class="button primary" href="contact.html#afspraak" data-promo-close>Afspraak maken</a>
           <button type="button" data-promo-close>Later bekijken</button>
@@ -44,8 +55,17 @@ if (!hasSeenPromo) {
 }
 
 const promoModal = document.querySelector("[data-promo-modal]");
+let promoTimer;
+
+if (promoModal) {
+  promoTimer = window.setTimeout(() => {
+    promoModal.classList.add("is-visible");
+  }, septemberPromo.delay);
+}
+
 const closePromo = () => {
   if (!promoModal) return;
+  window.clearTimeout(promoTimer);
   promoModal.classList.add("is-hidden");
   try {
     window.sessionStorage.setItem(septemberPromo.storageKey, "true");
