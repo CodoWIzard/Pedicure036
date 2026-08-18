@@ -117,7 +117,7 @@ if (careStudio) {
     },
     huid: {
       kicker: "Focus 02",
-      title: "Huidverzorging",
+      title: "Voetverzorging",
       copy: "Eelt, droge huid, kloven, likdoorns en gevoelige drukplekken worden rustig behandeld, met aandacht voor wat je voet dagelijks belast.",
       lines: ["Eelt zorgvuldig verminderen", "Kloven en droge huid verzorgen", "Drukplekken beoordelen", "Likdoorns rustig behandelen"],
       background: "58% center"
