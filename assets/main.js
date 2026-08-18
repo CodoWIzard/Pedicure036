@@ -173,7 +173,7 @@ if (careStudio) {
         ease: "power2.out",
         onComplete: () => {
           updateContent();
-          window.gsap.fromTo([kicker, title, copy, ...lines.children], {
+          window.gsap.fromTo([kicker, title, copy, lines, ...lines.children], {
             autoAlpha: 0,
             y: 10
           }, {
