@@ -622,16 +622,20 @@ h2 {
 
 .care-lines {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0 28px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
   max-width: 720px;
   margin-top: 38px;
-  border-top: 1px solid rgba(80, 62, 48, .18);
 }
 
 .care-lines span {
-  border-bottom: 1px solid rgba(80, 62, 48, .18);
-  padding: 16px 0;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(80, 62, 48, .16);
+  border-radius: 999px;
+  padding: 10px 15px;
+  background: rgba(255, 250, 242, .64);
   color: var(--ink);
   font-weight: 700;
 }

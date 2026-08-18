@@ -111,8 +111,8 @@ if (careStudio) {
     nagels: {
       kicker: "Focus",
       title: "Nagelverzorging",
-      copy: "Knippen, reinigen, mechanisch afwerken en polijsten van nagels met aandacht voor nagelvorm, verdikking en comfort in schoenen.",
-      lines: ["Knippen zonder druk", "Reinigen van nagelomgeving", "Afwerken en polijsten", "Advies bij verdikte nagels"],
+      copy: "De nagelbehandeling bestaat uit gerichte verzorging voor vorm, druk en comfort in schoenen.",
+      lines: ["Knippen", "Reinigen", "Mechanisch afwerken", "Polijsten", "Nagelomgeving verzorgen", "Advies bij verdikte nagels"],
       background: "center"
     },
     huid: {
